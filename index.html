@@ -93,11 +93,12 @@
         const withdraw = document.getElementById('addWithdraw').addEventListener('click', function(){
             const withdrawAmount = getInputNumber('withdrawNumber');
             updateSpanText('currentWithdraw', withdrawAmount);
+            updateSpanText('currentBalance', -1 * withdrawAmount);
                 
-            const currentBalance = document.getElementById('currentBalance').innerText;
-            const currentBalanceNumber = parseFloat(currentBalance);
-            const totalBalance = currentBalanceNumber - withdrawAmount;
-            document.getElementById('currentBalance').innerText = totalBalance;
+            // const currentBalance = document.getElementById('currentBalance').innerText;
+            // const currentBalanceNumber = parseFloat(currentBalance);
+            // const totalBalance = currentBalanceNumber - withdrawAmount;
+            // document.getElementById('currentBalance').innerText = totalBalance;
 
         })
      </script>
